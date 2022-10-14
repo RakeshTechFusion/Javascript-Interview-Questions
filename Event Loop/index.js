@@ -51,3 +51,10 @@ orderFood();
 setTimeout(foodReady,5000);
 thankYou();
 // Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency.
+
+
+
+// git branch -m Master master
+// git fetch origin
+// git branch -u origin/master master
+// git remote set-head origin -a
