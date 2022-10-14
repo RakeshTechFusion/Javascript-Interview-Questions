@@ -7,7 +7,6 @@
 //call stack is a data structure that uses the Last In, First Out (LIFO) principle to temporarily store and manage function invocation (call).
 //call stack is single
 //call stack is synchronous.
-
 // Web APIs
 // Web APIs are browser provided APIs that are not part of the JavaScript specification. Examples include the DOM, AJAX, and Timeout.
 // Web APIs are asynchronous.
@@ -36,3 +35,19 @@ setTimeout(()=>{
 console.log("thank you for ordering food");
 // Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency.
 
+
+//write a real life example of event loop
+//when you go to a restaurant and order food, you are waiting for the food to be prepared and served. The waiter takes your order and gives it to the chef. The chef prepares the food and gives it to the waiter. The waiter then serves the food to you. This is a real-life example of an event loop. The waiter is an event emitter, the chef is an event listener, and you are the event handler.
+function orderFood(){
+    console.log("please order food");
+}
+function foodReady(){
+    console.log("your food is ready");
+}
+function thankYou(){
+    console.log("thank you for ordering food");
+}
+orderFood();
+setTimeout(foodReady,5000);
+thankYou();
+// Every API of Node.js is asynchronous and being single-threaded, they use async function calls to maintain concurrency.
